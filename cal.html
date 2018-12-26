@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Calculator</title>
+<style>
+.fortable
+{
+    margin-top: 8%;
+    margin-left: 40%;
+    border: solid;
+    width:15%;
+    height: 35%;
+    padding: 1%;
+    
+}
+.txtcal
+{
+    margin-top: 5%;
+    margin-left: 40%;
+    font-size: 50px;
+    color:palevioletred
+}
+.txt
+{
+    width:100%;
+    height: 80% 
+}
+.butt
+{
+  background-color:blanchedalmond;
+  width: 100%;
+  height: 140%;
+}
+</style>
+</head>
+<body>
+    <h2 class="txtcal">Calculator</h2>
+<table class="fortable">
+<tr >
+    <td colspan="4"><input class="txt" type="text" id="display"></td>
+</tr>
+<tr></tr>
+<tr>
+    <td ><input class="butt"  type="button"  id="1" value="1" onclick="document.getElementById('display').value+=1"></td>
+    <td><input class="butt" type="button" id="2" value="2" onclick="document.getElementById('display').value+=2"></td>
+    <td><input class="butt" type="button" id="3" value="3" onclick="document.getElementById('display').value+=3"></td>
+    <td><input class="butt" type="button" id="add" value="+" onclick="check('+')"></td>
+    
+</tr>
+<tr></tr>
+<tr>
+        <td><input class="butt" type="button" id="4" value="4"onclick="document.getElementById('display').value+=4"></td>
+        <td><input class="butt" type="button" id="5" value="5" onclick="document.getElementById('display').value+=5"></td>
+        <td><input class="butt" type="button" id="6" value="6" onclick="document.getElementById('display').value+=6"></td>
+        <td><input class="butt" type="button" id="sub" value="-" onclick="check('-')"></td>
+</tr>
+<tr></tr>
+<tr>
+        <td><input class="butt" type="button" id="7" value="7" onclick="document.getElementById('display').value+=7"></td>
+        <td><input class="butt" type="button" id="7" value="8" onclick="document.getElementById('display').value+=8"></td>
+        <td><input class="butt" type="button" id="9" value="9" onclick="document.getElementById('display').value+=9"></td>
+        <td><input class="butt" type="button" id="mul" value="*" onclick="check('*')"></td>
+        
+      
+</tr>
+<tr></tr>
+<tr>
+        <td><input class="butt" type="button" id="0" value="0" onclick="document.getElementById('display').value+=0"></td>
+        <td><input class="butt" type="button" id="clear" value="ce" onclick="document.getElementById('display').value=''"></td>
+        <td><input class="butt" type="button" id="ans" value="=" onclick="answer()"></td>
+        <td><input class="butt" type="button" id="division" value="/" onclick="check('/')"></td>
+</tr>
+</table>
+
+<script>
+    var a;
+   function answer()
+   {
+    var str=document.getElementById("display").value;  
+    var ans=eval(str);
+    document.getElementById("display").value=ans;
+   }
+   function check(a)
+   {
+   var getstr=document.getElementById("display").value;
+   if(getstr[getstr.length-1] == a)
+    {   
+    }
+    else
+    {     
+    document.getElementById("display").value += a;  
+    }
+   }
+</script>
+
+</body>
+</html>
